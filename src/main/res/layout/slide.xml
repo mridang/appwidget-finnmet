@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_slide"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_background"
+    android:padding="@dimen/widget_spacing" >
+
+    <LinearLayout
+        android:id="@+id/weather_time"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/weather_wday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLines="1"
+            android:text="TUE"
+            android:textAllCaps="true"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/weather_when"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLines="1"
+            android:text="21:00"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/weather_time"
+        android:paddingLeft="@dimen/widget_spacing"
+        android:src="@drawable/ic_sunny" />
+
+    <TextView
+        android:id="@+id/current_temp"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/weather_icon"
+        android:gravity="center_vertical|right"
+        android:maxLines="1"
+        android:text="19.4°C"
+        android:textColor="#FF427FED"
+        android:textSize="@dimen/widget_large_text"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/rain_image"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/current_temp"
+        android:gravity="center"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:paddingRight="@dimen/widget_spacing"
+            android:src="@drawable/ic_rain" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rain_info"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rain_image"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/current_rain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLines="1"
+            android:text="0.0mm"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/rain_chances"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLines="1"
+            android:text="0.0mm"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wind_image"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rain_info"
+        android:gravity="center"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/wind_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:paddingRight="@dimen/widget_spacing"
+            android:src="@drawable/ic_rain" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/wind_image"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/wind_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="3m/s"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/wind_direc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="W"
+            android:textColor="#FF427FED"
+            android:textSize="@dimen/widget_small_text"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</RelativeLayout>
